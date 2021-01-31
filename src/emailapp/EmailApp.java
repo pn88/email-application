@@ -5,27 +5,27 @@ public class EmailApp {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        Email em1 = new Email("John", "Smith");
+        CreateEmailForNewEmployee em1 = new CreateEmailForNewEmployee("John", "Smith");
         int choice = -1;
         do {
             System.out.println("\nENTER CHOICE\n1.Show Info\n2.Change Password"
-                    + "\n3.Change Mailbox Capacity\n4.Set Alternate Email\n5.Exit");
+                    + "\n3.Change Mailbox Capacity\n4.Set Alternate CreateEmailForNewEmployee\n5.Exit");
             choice = s.nextInt();
             switch(choice) {
                 case 1:
-                    em1.getInfo();
+                    em1.printInfo();
                     break;
                 case 2:
-                    em1.set_password();
+                    em1.changePassword();
                     break;
                 case 3:
-                    em1.set_mailCap();
+                    em1.setupMailCap();
                     break;
                 case 4:
-                    em1.alternate_email();
+                    em1.alternateEmail();
                     break;
                 case 5:
-                    System.out.println("\nTHANKS!!!");
+                    System.out.println("\nTHANKS!");
                     break;
                 default:
                     System.out.println("INVALID CHOICE! ENTER AGAIN!");
